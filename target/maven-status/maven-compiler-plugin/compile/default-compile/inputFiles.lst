@@ -1,0 +1,12 @@
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/arrayByPoolPage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/WrongPageException.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/volumeMappingPage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/volumeByHostPage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/loginPage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/createClusterPage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/createVolumePage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/createPoolPairPage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/createHostPage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/hostPage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/volumePage.java
+/home/guifvt/gui_automation/DS8KGUI_Automation/src/main/java/ds8k/automation/pageobject/GuiHomePage.java

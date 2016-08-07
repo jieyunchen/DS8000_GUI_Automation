@@ -1,0 +1,12 @@
+ds8k/automation/pageobject/arrayByPoolPage.class
+ds8k/automation/pageobject/createVolumePage.class
+ds8k/automation/pageobject/volumeMappingPage.class
+ds8k/automation/pageobject/hostPage.class
+ds8k/automation/pageobject/createHostPage.class
+ds8k/automation/pageobject/createClusterPage.class
+ds8k/automation/pageobject/volumeByHostPage.class
+ds8k/automation/pageobject/GuiHomePage.class
+ds8k/automation/pageobject/loginPage.class
+ds8k/automation/pageobject/volumePage.class
+ds8k/automation/pageobject/createPoolPairPage.class
+ds8k/automation/pageobject/WrongPageException.class

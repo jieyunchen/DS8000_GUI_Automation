@@ -1,0 +1,7 @@
+ds8k/automation/validation/volumeMappingTest_.class
+ds8k/automation/validation/CreateExtpoolTest.class
+ds8k/automation/validation/DeleteExtpoolTest.class
+ds8k/automation/validation/volumeUnmappingTest_.class
+ds8k/automation/validation/CreateVolumeTest_.class
+ds8k/automation/validation/MAAssignToExtpoolTest.class
+ds8k/automation/validation/CreateHostTest_.class
