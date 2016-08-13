@@ -210,15 +210,32 @@ public class arrayByPoolPage {
 	
 	
 	public String FillAssignMAForm(String extpool) {
+		String firstMAXpath;
+		String firstMAXpath_1;
+		String firstMA; 
+		String MAStatus; 
+		int i = 2;
+		
 		String expandBtnXpath = ".//*[@id='dojox_grid__LazyExpando_0']/div";
 		driver.findElement(By.xpath(expandBtnXpath)).click();
 		
-		String firstMAXpath = ".//*[@id='dojox_grid__TreeGridView_1']/div/div/div/div[2]/table/tbody/tr/td";
-		String firstMAXpath_1 = ".//*[@id='dojox_grid__TreeGridView_1']/div/div/div/div[2]";
-		String firstMA = driver.findElement(By.xpath(firstMAXpath)).getText();
-		if (driver.findElement(By.xpath(firstMAXpath_1)).getText().contains("Unassigned") == false){
-		    System.out.println("The first Array state is not unassigned!!");
-                    return null;
+		while(true){
+			firstMAXpath = ".//*[@id='dojox_grid__TreeGridView_1']/div/div/div/div[" + i + "]/table/tbody/tr/td";
+			firstMAXpath_1 = ".//*[@id='dojox_grid__TreeGridView_1']/div/div/div/div[" + i + "]";
+			
+			firstMA = driver.findElement(By.xpath(firstMAXpath)).getText();
+			MAStatus = driver.findElement(By.xpath(firstMAXpath_1)).getText();
+			
+			System.out.println("i: " + i + " ; MA: " + firstMA);
+			
+			if (!firstMA.startsWith("MA")) {
+				System.out.println("No MA in DS8K can be assigned");
+				return null;
+			}
+			if (firstMA.startsWith("MA") && MAStatus.contains("Unassigned")){
+				break;
+			}
+			i++;
 		}
 		
 		Actions action = new Actions(driver);
@@ -279,22 +296,23 @@ public class arrayByPoolPage {
 		String btnClassAttr;
 					
 		while(true){
-                        if (counter == 0){
-                                driver.findElement(By.xpath(".//*[@id='dijit_TitlePane_0_titleBarNode']/div/span[3]")).click();
-                                System.out.println("clicked view more details...");
-                        }
+			if (counter == 0){
+				driver.findElement(By.xpath(".//*[@id='dijit_TitlePane_0_titleBarNode']/div/span[3]")).click();
+				System.out.println("clicked view more details...");
+			}
 
 			btnClassAttr = driver.findElement(By.xpath(".//*[@id='evo_dialog_Dialog_0']/div[3]/span[1]")).getAttribute("class");
 			System.out.println("counter: " + counter + "; attribute: " + btnClassAttr);
 			if (btnClassAttr.contains("dijitButtonDisabled") == false){
 				break;
 			}
-                        //wait for 5 seconds
-                        try {
-                                Thread.sleep(5000);
-                        }catch (Exception e){
-                                e.getMessage();
-                        }
+            
+			//wait for 5 seconds
+            try {
+            	Thread.sleep(5000);
+             }catch (Exception e){
+            	 e.getMessage();
+             }
 
 			counter++;
 		}
