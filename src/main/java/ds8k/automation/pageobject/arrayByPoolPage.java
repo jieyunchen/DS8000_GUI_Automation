@@ -242,7 +242,7 @@ public class arrayByPoolPage {
 		action.moveToElement(driver.findElement(By.xpath(firstMAXpath)));
 		action.contextClick(driver.findElement(By.xpath(firstMAXpath))).build().perform();
 		//driver.findElement(By.id("evo_widget_MenuItemTooltip_6_text'")).click();
-		WebElement assignBtn = driver.findElement(By.id("evo_widget_MenuItemTooltip_6_text"));
+		WebElement assignBtn = driver.findElement(By.id("evo_widget_MenuItemTooltip_8_text"));
 		assignBtn.click();
 		
 		driver.findElement(By.id("evo_form_SmartSelect_2")).click();
@@ -335,7 +335,7 @@ public class arrayByPoolPage {
 		action.moveToElement(driver.findElement(By.xpath(extpoolXpath)));
 		action.contextClick(driver.findElement(By.xpath(extpoolXpath))).build().perform();
 		
-		WebElement deleteBtn = driver.findElement(By.id("evo_widget_MenuItemTooltip_18_text"));
+		WebElement deleteBtn = driver.findElement(By.id("evo_widget_MenuItemTooltip_20_text"));
 		deleteBtn.click();
 		
 		WebElement confirmBtn = driver.findElement(By.id("dijit_form_Button_8"));
