@@ -259,7 +259,7 @@ public class arrayByPoolPage {
 		table = driver.findElement(By.id("evo_form_SmartSelect_0_menu"));
 		tableCells = table.findElements(By.tagName("tr"));
 		for(WebElement cell : tableCells) {
-			if (cell.getText().startsWith("RAID 5") == true){
+			if (cell.getText().startsWith("RAID 6") == true){
 				cell.click();
 				break;
 			}
