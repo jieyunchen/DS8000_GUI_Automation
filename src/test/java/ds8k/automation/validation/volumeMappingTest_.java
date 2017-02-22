@@ -27,11 +27,12 @@ public class volumeMappingTest_ {
 	
 	@Before 
 	public void setup() throws Exception {
-		FirefoxProfile profile = new FirefoxProfile();
-		profile.setPreference("network.proxy.type", 1);
-		profile.setPreference("network.proxy.socks", "localhost");
-		profile.setPreference("network.proxy.socks_port", 8888);
-		driver = new FirefoxDriver(profile);
+		//FirefoxProfile profile = new FirefoxProfile();
+		//profile.setPreference("network.proxy.type", 1);
+		//profile.setPreference("network.proxy.socks", "localhost");
+		//profile.setPreference("network.proxy.socks_port", 8888);
+		//driver = new FirefoxDriver(profile);
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}

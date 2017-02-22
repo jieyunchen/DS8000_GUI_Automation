@@ -15,10 +15,10 @@ public class createHostPage {
 	
 	public void createHost(int counter) {
 		
-		String hostNameSelect = "dijit_form_ValidationTextBox_" + Integer.toString(1 + counter);
+		String hostNameSelect = "dijit_form_ValidationTextBox_" + Integer.toString(2 + counter);
 		String checkboxSelect = "dijit_form_CheckBox_" + Integer.toString(counter);
 		String comboBoxSelect = "dijit_form_ComboBox_" + Integer.toString(1 + counter * 2);
-		String buttonSelect = "dijit_form_Button_" + Integer.toString(7 + 2 * counter) + "_label";
+		String buttonSelect = "dijit_form_Button_" + Integer.toString(7 + 2 * (counter + 1)) + "_label";
 		String HBAPort;
 		
 		System.out.println("Counter: " + counter);

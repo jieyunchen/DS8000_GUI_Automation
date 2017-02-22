@@ -9,9 +9,11 @@ import java.util.Date.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import ds8k.automation.pageobject.GuiHomePage;
 import ds8k.automation.pageobject.loginPage;
@@ -28,12 +30,12 @@ public class CreateHostTest_ {
 	
 	@Before 
 	public void setup() throws Exception {
-		FirefoxProfile profile = new FirefoxProfile();
-		profile.setPreference("network.proxy.type", 1);
-		profile.setPreference("network.proxy.socks", "localhost");
-		profile.setPreference("network.proxy.socks_port", 8888);
-		driver = new FirefoxDriver(profile);
-		driver.manage().window().maximize();
+
+		
+		driver = new FirefoxDriver();
+		//driver.manage().window().setSize(new Dimension(1200, 1024));
+		driver.manage().window().setSize(new Dimension(1920, 1080));
+        // driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
@@ -79,16 +81,18 @@ public class CreateHostTest_ {
 	
 	//batch create clusters
 	public void test_create_batch_cluster() throws Exception {
+		int i = 0;
 		navigateToHostPage();
 		System.out.println("Starting to batch cluster:" + GetCurrentTime());
 		for (int counter = 0; counter < 100; counter++){
 			createClusterPage cluster = hostPage.createCluster();
-			cluster.createCluster(counter);
+			cluster.createCluster(counter, i);
 			try {
 				Thread.sleep(5000);
 			}catch (Exception e){
 				e.getMessage();
 			}
+			i++;
 		}
 		System.out.println("End to batch cluster:" + GetCurrentTime());
 	}

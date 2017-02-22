@@ -13,10 +13,10 @@ public class createClusterPage {
 		this.driver = driver;
 	}
 	
-	public void createCluster(int counter) {
+	public void createCluster(int counter, int i) {
 		
-		String TextboxSelect = "dijit_form_ValidationTextBox_" + Integer.toString(1 + counter);
-		String buttonSelect = "dijit_form_Button_" + Integer.toString(7 + 2 * counter) + "_label";
+		String TextboxSelect = "dijit_form_ValidationTextBox_" + Integer.toString(2 + i);
+		String buttonSelect = "dijit_form_Button_" + Integer.toString(7 + 2 * (i + 1)) + "_label";
 		
 		//System.out.println("Counter: " + counter);
 		//System.out.println("TextboxSelect: " + TextboxSelect);

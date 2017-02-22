@@ -14,17 +14,17 @@ public class hostPage {
 	
 	public createHostPage createHost() {
 		WebDriverWait wait = new WebDriverWait(driver,60);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dijit_form_Button_3_label")));	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dijit_form_Button_5_label")));	
 		
-		driver.findElement(By.id("dijit_form_Button_3_label")).click();
+		driver.findElement(By.id("dijit_form_Button_4_label")).click();
 		return new createHostPage(driver);
 	}
 
 	public createClusterPage createCluster() {
 		WebDriverWait wait = new WebDriverWait(driver,60);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dijit_form_Button_2_label")));	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dijit_form_Button_4_label")));	
 		
-		driver.findElement(By.id("dijit_form_Button_2_label")).click();
+		driver.findElement(By.id("dijit_form_Button_5_label")).click();
 		return new createClusterPage(driver);
 		
 	}

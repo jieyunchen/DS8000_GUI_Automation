@@ -38,7 +38,7 @@ public class loginPage {
 		driver.findElement(By.xpath(submitBtnXpath)).click();
 		
 		//Wait until GUI home page presents
-		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebDriverWait wait = new WebDriverWait(driver,1000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("gem_pods_CapacityStatusPod_0")));
 		
 		

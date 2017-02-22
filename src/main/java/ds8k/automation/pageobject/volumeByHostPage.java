@@ -77,7 +77,7 @@ public class volumeByHostPage {
 				WebElement host = driver.findElement(By.xpath(cellXPath));
 				action.moveToElement(host);
 				action.contextClick(host).build().perform();
-				driver.findElement(By.id("evo_widget_MenuItemTooltip_30_text")).click();
+				driver.findElement(By.id("evo_widget_MenuItemTooltip_34_text")).click();
 				break;
 			}
 			counter++;
