@@ -12,8 +12,7 @@ public class loginPage {
 	private String submitBtnXpath = ".//*[@id='form']/div[1]/div[3]/table/tbody/tr[3]/td[2]/nobr/a";
 	private String userName = "admin";
 	private String password = "passw0rd";
-	private String loginURL = "https://guifvth1.tuc.stglabs.ibm.com:8452/DS8000/login";
-	//private String loginURL = "https://guifvth2.tuc.stglabs.ibm.com:8452/DS8000/login";
+	private String loginURL = "https://guifvth1.xxx.xxxx.xxx.com:8452/login";
 	
 	public loginPage(WebDriver driver) {
 		this.driver = driver;
